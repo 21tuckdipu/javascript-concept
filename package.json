@@ -1,0 +1,22 @@
+{
+  "name": "js-chaiaurcode",
+  "version": "1.0.0",
+  "description": "this is compresin js - exsreina dn concept based \r vidoe - follow for learniong was teh chai-air-code (histest chaudroy )",
+  "main": "comparison.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "comparison":"node comparsion.js",
+    "datatype":"node datatype_ema.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/21tuckdipu/javascript-concept.git"
+  },
+  "keywords": [],
+  "author": "Dipu Sonar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/21tuckdipu/javascript-concept/issues"
+  },
+  "homepage": "https://github.com/21tuckdipu/javascript-concept#readme"
+}
