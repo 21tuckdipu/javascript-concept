@@ -39,5 +39,5 @@ console.log(`${url} : replace() functions : ${url.replace('dipu','helloworld')}`
 console.log(`${url} : check dipu is present : ${url.includes('dipu')}`);  //verify that specific variable present in the data or not
 console.log("<!--------------------------------------------!");
 
-
-// console.log(gameName.split('-'));
+let spiderMan = "sipder-man-looking"
+console.log(spiderMan.split('-'));
