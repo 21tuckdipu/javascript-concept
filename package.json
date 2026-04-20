@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "comparison":"node comparsion.js",
     "datatype_ema":"node datatype_ema.js",
-    "datatype":"node data",
+    "datatypeNote":"node datatypeNote.js",
     "symbols":"node symbols.js"
   },
   "repository": {
