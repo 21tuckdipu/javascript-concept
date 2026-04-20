@@ -36,6 +36,8 @@ let isTrueBoolean = true;
 let myArr = ['Apple',["Graphs","Banana"],'Mango'];
 let myObj = {"city":"mumbai"};
 
+let mySymbol = Symbol("dipuSymbol");
+
 console.log(`${name} : ${typeof name}`);
 console.log(`${float_number} : ${typeof float_number}`);
 
@@ -50,3 +52,5 @@ console.log(`${isTrueBoolean} : ${typeof isTrueBoolean}`);
 console.log(`${JSON.stringify(myArr)} : ${typeof myArr}`);
 console.log(`${myArr.join("-")} : ${typeof myArr}`);
 console.log(`${JSON.stringify(myObj)} : ${typeof myObj}`);
+
+console.log(`${mySymbol.toString()} : ${typeof mySymbol}`)
