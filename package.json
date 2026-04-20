@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "first":"node first.js",
+    "stringOperation":"node learnString.js",
     "comparison":"node comparsion.js",
     "datatype_ema":"node datatype_ema.js",
     "datatypeNote":"node datatypeNote.js",
