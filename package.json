@@ -8,7 +8,8 @@
     "comparison":"node comparsion.js",
     "datatype_ema":"node datatype_ema.js",
     "datatypeNote":"node datatypeNote.js",
-    "symbols":"node symbols.js"
+    "symbols":"node symbols.js",
+    "type-conversion":"node datatype_conversion.js"
   },
   "repository": {
     "type": "git",
