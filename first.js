@@ -1,19 +1,20 @@
 console.log('hello')
 
-//defining the variable in python
-
+//defining the variable in javascript
 let nameStudent ='Dipu'
 var studId ="STIT2024"
 companyLocation = 'Mumbai'
 const country = 'India'
 
-
 //printing on the Display
-//console.log(nameStudent);
-//console.log(studId);
-//console.log(companyLocation);
+console.log(`Student Name : ${nameStudent}`);
+console.log(`Student ID : ${studId}`);
+console.log(`Student Country : ${country}`);
+console.log(`Company Location  : ${companyLocation}`);
 
-
+//modiy the company location
+companyLocation = "Delhi South";
+console.log(`Company Location  : ${companyLocation}`);
 
 /*trying to overide the variable to see their behavoir of the code*/
 nameStudent ='Jackson'
@@ -34,7 +35,9 @@ console.log('123.123',123,true);
 //printing the statement with the help of substitute
 console.log('Test %s %j',123 ,'abc');
 console.log('%o',{dipu:"name" , hek:123});
-/* 
+
+/*
+SUBSTITUTE - SYNTAX 
 %s    string
 %o  object string
 %j   json string   
@@ -47,4 +50,4 @@ a = 99;
 console.log('%s%%',a);
 
 //printing the nested object
-console.log(JSON.stringify({first:'jane' ,  last:'Doe'} ,null , 2));
+console.log(JSON.stringify({first:'jane' ,  last:'Doe'} ,null , 2));   //explore this part later
