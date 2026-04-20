@@ -1,4 +1,4 @@
-//primitive Datatype = only copy of the data not memory reference
+//primitive Datatype = only copy of the data , or Actual Data not memory reference
 
 //7 types : string , Number , Boolean , null , undefined , symbol , BigInt
 
@@ -14,24 +14,20 @@ const anotherid = Symbol('123')
 
 //console.log(id == anotherid)
 
-const bigNumber = 32333333333333n  //bigint is not used in production on day to day . rarely used on day to day based
+const bigNumber = 32333333333333n  
+//bigint is not used in production on day to day . rarely used on day to day based
 
-
-
-//reference type / non-primitive datatypes
+// reference type / non-primitive datatypes
 // allocation of memory directly 
 // array , object , function 
 // non primitive datatype has datatype object
 
-
-
-// in javascriptwe do not defined the language so its is a dynamic language
+// in javascriptw do not defined the language(type) so its is a dynamic language
 const heros = ["Shatiman","naagraj","doga"];   //array
 let myobj = {
     name:"dipu",
     age:21,
     school :"passout"
-
 } //object
 
 console.log(typeof myobj);
