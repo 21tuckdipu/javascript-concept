@@ -21,8 +21,5 @@ var isEven = (Element) =>{
 //     return e%2 === 0;
 // });
 
-var result = [2,3,4,8].every((e) => (e%2 === 0
-
-    
-));
+var result = [2,3,4,8].every((e) => (e%2 === 0));
 console.log(result)

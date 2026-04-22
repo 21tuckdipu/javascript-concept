@@ -15,4 +15,4 @@ console.log(dipu) //undefine if yoou want to create an object yoiu need to defin
 var sam = new User("Do","Samy","r")
 console.log(sam)
 
-//NEW KEYWROD RESPONSIBEL FOR ONVOKING THE CONSTRUCTOE AN DMAKING UNIQUE INSTANCE EVERY SINGLE TIME
+//NEW KEYWROD RESPONSIBEL FOR ONVOKING THE CONSTRUCTOE AND MAKING UNIQUE INSTANCE EVERY SINGLE TIME

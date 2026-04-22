@@ -5,7 +5,7 @@ function setUserName(user_name){
 }
 
 function createUser(user_name,email, pass){
-    // setUserName.call(user_name)
+   
     // setUserName.call(user_name)
     setUserName.call(this,user_name)
     this.email = email;

@@ -30,7 +30,7 @@ console.log(myarray);
 //console.log(myarray.indexOf(3));  // return the  index value of the values pass in teh arry
 //console.log(myarray);
 
-// console.log(myarray.join())  // convert the array in to string
+console.log(myarray.join()+"converted to string")  // convert the array in to string
 
 //Slice , Splice
 
@@ -40,8 +40,7 @@ console.log(myn1);
 console.log("A",myarray);
 
 const myn2 = myarray.splice(1,3);
-console.log(myn2);
-console.log(myn2);
+console.log(myn2+" : "+myarray);
 
 //in splice the whole array sturcture has beeen change the index which is passed in splice is remove from the main array
 
