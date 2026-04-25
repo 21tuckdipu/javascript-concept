@@ -1,21 +1,22 @@
 {
   "name": "js-chaiaurcode",
   "version": "1.0.0",
+  "type": "module",
   "description": "this is compresin js - exsreina dn concept based \r vidoe - follow for learniong was teh chai-air-code (histest chaudroy )",
   "main": "comparison.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "first":"node first.js",
-    "stringOperation":"node learnString.js",
-    "comparison":"node comparsion.js",
-    "datatype_ema":"node datatype_ema.js",
-    "datatypeNote":"node datatypeNote.js",
-    "symbols":"node symbols.js",
-    "type-conversion":"node datatype_conversion.js",
-    "mathOperation":"node numMath.js",
-    "arr-loops":"node loops/arrLoops.js",
-    "filter-demo":"node loops/filterDemo.js",
-    "map":"node loops/map.js"
+    "first": "node first.js",
+    "stringOperation": "node learnString.js",
+    "comparison": "node comparsion.js",
+    "datatype_ema": "node datatype_ema.js",
+    "datatypeNote": "node datatypeNote.js",
+    "symbols": "node symbols.js",
+    "type-conversion": "node datatype_conversion.js",
+    "mathOperation": "node numMath.js",
+    "arr-loops": "node loops/arrLoops.js",
+    "filter-demo": "node loops/filterDemo.js",
+    "map": "node loops/map.js"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,9 @@
   "bugs": {
     "url": "https://github.com/21tuckdipu/javascript-concept/issues"
   },
-  "homepage": "https://github.com/21tuckdipu/javascript-concept#readme"
+  "homepage": "https://github.com/21tuckdipu/javascript-concept#readme",
+  "dependencies": {
+    "@types/prompt-sync": "^4.2.3",
+    "prompt-sync": "^4.2.0"
+  }
 }
