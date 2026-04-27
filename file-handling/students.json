@@ -1,0 +1,41 @@
+{
+  "classA": [
+    {
+      "id": 559
+    },
+    {
+      "id": 806,
+      "name": "Cortez Keebler"
+    },
+    {
+      "id": 930,
+      "name": "Myron Lesch"
+    },
+    {
+      "id": 661,
+      "name": "Julio Rippin"
+    },
+    {
+      "id": 901,
+      "name": "Dr. Wilson Gerhold"
+    },
+    {
+      "id": 981,
+      "name": "Vella Raynor"
+    },
+    {
+      "id": 567,
+      "name": "Tami Steuber"
+    },
+    {
+      "id": 405,
+      "name": "Alford Cruickshank"
+    }
+  ],
+  "classB": [
+    {
+      "id": 405,
+      "name": "Alford Cruickshank"
+    }
+  ]
+}
