@@ -4,6 +4,8 @@ import { faker } from "@faker-js/faker"
 import promptSync from "prompt-sync";
 let prompt = promptSync();
 
+let user_Task: String[] = [];
+let File_Path: string = "";
 function readToDoFile(file_path: string) {
     let file_data = readFileSync(file_path, "utf-8")
     // console.log(file_data)
@@ -19,18 +21,18 @@ function generateUquieToDoID(): string {
     return id
 }
 
-function dataFormat(title: string, user_status: string, arr_task: any) {
+function JSONdataFormat(user_status: string, arr_task: any) {
+    let date = new Date()
     return {
-        name: title,
         status: user_status,
-        data: Date.now().toString(),
+        date: date.toString(),
         task: arr_task
     }
 }
 
 function insertNewToDo(to_do_entry: object) {
     let id = generateUquieToDoID()
-    // fetchData[id] = to_do_entry
+    currentLoadedFile = to_do_entry;
     return id
 }
 
@@ -63,7 +65,8 @@ function loadSelectedToDo(displayMSG: string, inputMSG: string): any {
     let file_path = generateFilePath(file_name)
     if (existsSync(file_path)) {
         console.log(`FileFound : ${file_name}`);
-        let fetchData: Record<string, any> = JSON.parse(readToDoFile(FilePathDev));
+        let fetchData: Record<string, any> = JSON.parse(readToDoFile(file_path));
+        File_Path = file_path
         return fetchData
     } else {
         console.log(`FileName not Found :`)
@@ -72,6 +75,18 @@ function loadSelectedToDo(displayMSG: string, inputMSG: string): any {
     }
 }
 
+function searchSpecificToDo() {
+
+}
+/*
+  json - {
+    date:
+    status:
+    tasks:[
+    
+    ]
+  }
+*/
 
 //-------------program ecution----------------
 let FilePathDev = "projects/to-do-file/to-do-01.json";
@@ -88,11 +103,25 @@ while (true) {
             let file_path = generateFilePath(user_file_name);
             creatingNewToDo(file_path);
 
+            while (true) {
+                let task = prompt("Add Task - if no - q");
+                if (task.toLowerCase() == "q") {
+                    break
+                } else {
+                    user_Task.push(task)
+                }
+            }
+            let insert_data = JSONdataFormat("InProgress", user_Task)
+            console.log(insert_data)
+            insertNewToDo(insert_data);
+            addToDoFile(file_path, JSON.stringify(insert_data, null, 2))
+            user_Task = []
+            currentLoadedFile = {}
         }
         else if (user.toLowerCase() == "2") {
             let display_file_name = prompt("Enter File name to display");
             let file_path = generateFilePath(display_file_name);
-            readToDoFile(file_path)
+            console.log(readToDoFile(file_path));
 
         } else if (user.toLowerCase() == "4") {
             let file_name = prompt("Enter FileName to Delete:");
@@ -108,28 +137,62 @@ while (true) {
                 if (update_action.toLowerCase() == "31") {
                     let displayMSG = "Action APPENED TO-DO";
                     let inputMSG = "ENTER NAME FILENAME"
-                    currentLoadedFile = loadSelectedToDo(displayMSG,inputMSG);
-                    console.log(currentLoadedFile)
-                    break
+                    currentLoadedFile = loadSelectedToDo(displayMSG, inputMSG);
+
+                    let append_container = currentLoadedFile.task
+                    while (true) {
+                        let append_task = prompt("Enter the Task ");
+                        if (append_task == "q") {
+                            console.log(append_container);
+                            addToDoFile(File_Path, JSON.stringify(currentLoadedFile, null, 2))
+                            // user_Task = []
+                            currentLoadedFile = {}
+                            break
+                        } else {
+                            append_container.push(append_task);
+                        }
+                    }
 
                 } else if (update_action.toLowerCase() == "32") {
                     let displayMSG = "Action UPDAYTE-COMPLETELY TO-DO";
                     let inputMSG = "ENTER NAME FILENAME"
-                    currentLoadedFile = loadSelectedToDo(displayMSG,inputMSG);
-                    console.log(currentLoadedFile)
+                    currentLoadedFile = loadSelectedToDo(displayMSG, inputMSG);
+                    console.log(currentLoadedFile.task);
+
+                    let update_container = currentLoadedFile.task;
+
+                    while (true) {
+                        let replace_task = prompt("Enter the Task ");
+                        if (replace_task == "q") {
+                            console.log(update_container);
+                            currentLoadedFile.task = user_Task
+                            addToDoFile(File_Path, JSON.stringify(currentLoadedFile, null, 2))
+                            user_Task = []
+                            currentLoadedFile = {}
+                            break
+                        } else {
+                            user_Task.push(replace_task)
+                        }
+                    }
+
                     break
 
                 } else if (update_action.toLowerCase() == "33") {
                     let displayMSG = "Action DELETE- TO-DO";
                     let inputMSG = "ENTER NAME FILENAME"
-                    currentLoadedFile = loadSelectedToDo(displayMSG,inputMSG);
+                    currentLoadedFile = loadSelectedToDo(displayMSG, inputMSG);
                     console.log(currentLoadedFile)
+                    currentLoadedFile.task = [];
+                    addToDoFile(File_Path, JSON.stringify(currentLoadedFile, null, 2))
+                    user_Task = []
+                    currentLoadedFile = {}
+
                     break
 
                 } else if (update_action.toLowerCase() == "34") {
                     console.log("Actions : LEAVE");
                     currentLoadedFile = {}
-                    console.log(currentLoadedFile)
+                    user_Task = []
                     break
 
                 } else {
