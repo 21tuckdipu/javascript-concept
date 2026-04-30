@@ -34,9 +34,7 @@
     "@types/prompt-sync": "^4.2.3",
     "prompt-sync": "^4.2.0"
   },
-  "compilerOptions": {
-    "target": "ES6"
-  },
+ 
   "devDependencies": {
     "@types/node": "^25.6.0"
   }
