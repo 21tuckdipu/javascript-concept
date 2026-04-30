@@ -2,7 +2,7 @@
 
 // Date  is an Object in javascript
 
-/*let mydate = new Date()
+let mydate = new Date()
 console.log(mydate);
 console.log(mydate.toString(),'original');
 console.log(mydate.toDateString(),'DateString');
@@ -16,7 +16,7 @@ console.log(mydate.toLocaleString(),'LocaleString');
 
 
 
-console.log(mydate.toUTCString(),'UTCString');*/
+console.log(mydate.toUTCString(),'UTCString');
 
 //month start from 0 in javascript
 
