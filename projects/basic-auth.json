@@ -1,0 +1,14 @@
+[
+  {
+    "user_email": "dipu@gmail.com",
+    "user_password": "Dipu@123456"
+  },
+  {
+    "user_email": "mick@gmail.com",
+    "user_password": "12345"
+  },
+  {
+    "user_email": "dipu@gmai.com",
+    "user_password": "33243"
+  }
+]
