@@ -2,27 +2,7 @@
 import{readFileSync , writeFileSync} from "fs"
 import promptSync from "prompt-sync";
 let prompt = promptSync();
-/*
-  username : strubg
-  password : string
-  confirmpasswor: string
-  email:
-  iaaccept :
-  createAccount - Y and N  
-   if(Y)-> validate nad create
-   If (N) -> back - popup appear and loop ";
 
-   created -> y -> login screen -> mail adn passrod -> login  uscessfully and display username
-*/
-
-/*
- task Break down - scenario simple and effective 
- phase01 - buld the user input template -done
- phase02 - implement the auth hash path --not -future enhacement
- phase logic for duplicaet record
- phase for logic for valid login
- pahase for logic for invalid login attenpt
-*/
 
 // demographic
 let user_name: string = "";
