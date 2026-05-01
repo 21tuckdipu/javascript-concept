@@ -63,4 +63,14 @@ for(let i= 0; i<objectKeys.length; i++){
     let values = employee_salary[objectKeys[i]];
     console.log(values)
 }
-printLines()
+printLines();
+
+function info(a:number,b:number):any{
+    if(a>b){
+        return true
+    }else{
+        return "False"
+    }
+}
+console.log("Check how any work in TS : 4 > 5 ",info(4,5),typeof(info(4,5)));
+console.log("Check how any work in TS : 5 > 4 ",info(5,4),typeof(info(5,4)));
