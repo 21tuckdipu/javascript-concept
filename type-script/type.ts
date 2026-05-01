@@ -14,3 +14,6 @@ console.log(con_name+" : "+typeof(con_name))
 let my_Status :any = true;
 let con_status =  my_Status as boolean;
 console.log(con_status+" : "+typeof(con_status));
+
+let user_undefine:undefined = undefined;
+let usr_null:null = null
