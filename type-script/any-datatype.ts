@@ -1,5 +1,7 @@
 {}
-
+function printLines(){
+    console.log("---------------------------------")
+}
 //can be any data type primitve if declare
 let employee_name:any = "Dipu";
 let employee_code :any = 123;
@@ -24,10 +26,12 @@ for(let i in employee_record){
     console.log(employee_record[i])
 }
 
+printLines()
 console.log(" For OF Loop")
 for(let i of employee_record){
     console.log(i)
 }
+printLines()
 
 
 
@@ -48,7 +52,15 @@ let employee_salary_03:Record<any,string> ={
     "india":"677",
      "Dho":"45"
 }
+
 //looping through the objects
-for(let i= 0; i<employee_salary ; i++){
-    
+printLines()
+console.log("For traditional Loops");
+
+let objectKeys = Object.keys(employee_salary)
+console.log(objectKeys)
+for(let i= 0; i<objectKeys.length; i++){
+    let values = employee_salary[objectKeys[i]];
+    console.log(values)
 }
+printLines()
