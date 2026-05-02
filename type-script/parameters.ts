@@ -5,6 +5,12 @@ function getInformation(name:string , age ?:number){
 
 }
 
+//default - parameter
+function helloWorld(name:string,msg :string = "Welcome"){
+    console.log(`${name} : ${msg}`)
+}
+
 //fir optional parameter ?:
 //for default values user ??
-getInformation("Dipu")
+getInformation("Dipu");
+helloWorld("Dipu","Thanks")
